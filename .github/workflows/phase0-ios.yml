@@ -1,0 +1,39 @@
+name: Phase 0 iOS build
+
+on:
+  push:
+    paths:
+      - 'WildTrace/**'
+      - 'WildTrace.xcodeproj/**'
+      - '.github/workflows/phase0-ios.yml'
+  pull_request:
+    paths:
+      - 'WildTrace/**'
+      - 'WildTrace.xcodeproj/**'
+      - '.github/workflows/phase0-ios.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: phase0-ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  native-spike-build:
+    # Transitional Phase-0 guard. Replace/add Flutter analyze/test/build once
+    # the Flutter host project is generated on macOS.
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Show toolchain
+        run: xcodebuild -version
+      - name: Build native Phase-0 spike for simulator
+        run: >-
+          xcodebuild
+          -project WildTrace.xcodeproj
+          -scheme WildTrace
+          -configuration Debug
+          -sdk iphonesimulator
+          -destination 'generic/platform=iOS Simulator'
+          CODE_SIGNING_ALLOWED=NO
+          clean build

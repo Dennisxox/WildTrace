@@ -1,0 +1,137 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B10000000000000000000001 /* WildTraceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000001 /* WildTraceApp.swift */; };
+		B10000000000000000000002 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000002 /* AppModel.swift */; };
+		B10000000000000000000003 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000003 /* RootTabView.swift */; };
+		B10000000000000000000004 /* ActiveTourBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000004 /* ActiveTourBar.swift */; };
+		B10000000000000000000005 /* DomainTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000005 /* DomainTypes.swift */; };
+		B10000000000000000000006 /* PersistenceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000006 /* PersistenceModels.swift */; };
+		B10000000000000000000007 /* Providers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000007 /* Providers.swift */; };
+		B10000000000000000000008 /* LocationTrackingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000008 /* LocationTrackingProviding.swift */; };
+		B10000000000000000000009 /* CoreLocationTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000009 /* CoreLocationTrackingService.swift */; };
+		B1000000000000000000000A /* TourTrackingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000A /* TourTrackingController.swift */; };
+		B1000000000000000000000B /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000B /* MapScreen.swift */; };
+		B1000000000000000000000C /* ToursScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000C /* ToursScreen.swift */; };
+		B1000000000000000000000D /* TourDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000D /* TourDetailScreen.swift */; };
+		B1000000000000000000000E /* SpeciesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000E /* SpeciesScreen.swift */; };
+		B1000000000000000000000F /* AnalyticsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000F /* AnalyticsScreen.swift */; };
+		B10000000000000000000010 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000010 /* SettingsScreen.swift */; };
+		B10000000000000000000011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000011 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F10000000000000000000001 /* WildTraceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/App/WildTraceApp.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000002 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/App/AppModel.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000003 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/App/RootTabView.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000004 /* ActiveTourBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/App/ActiveTourBar.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000005 /* DomainTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Domain/DomainTypes.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000006 /* PersistenceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Domain/PersistenceModels.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000007 /* Providers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Domain/Protocols/Providers.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000008 /* LocationTrackingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Tracking/LocationTrackingProviding.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000009 /* CoreLocationTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Tracking/CoreLocationTrackingService.swift; sourceTree = SOURCE_ROOT; };
+		F1000000000000000000000A /* TourTrackingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Tracking/TourTrackingController.swift; sourceTree = SOURCE_ROOT; };
+		F1000000000000000000000B /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Map/MapScreen.swift; sourceTree = SOURCE_ROOT; };
+		F1000000000000000000000C /* ToursScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Tours/ToursScreen.swift; sourceTree = SOURCE_ROOT; };
+		F1000000000000000000000D /* TourDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Tours/TourDetailScreen.swift; sourceTree = SOURCE_ROOT; };
+		F1000000000000000000000E /* SpeciesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Taxonomy/SpeciesScreen.swift; sourceTree = SOURCE_ROOT; };
+		F1000000000000000000000F /* AnalyticsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Analytics/AnalyticsScreen.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000010 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildTrace/Settings/SettingsScreen.swift; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WildTrace/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WildTrace/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
+		F10000000000000000000013 /* WildTrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = WildTrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10000000000000000000014 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000003 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (A10000000000000000000005 /* Sources */, F10000000000000000000014 /* README.md */, A10000000000000000000006 /* Products */);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000005 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000001, F10000000000000000000002, F10000000000000000000003, F10000000000000000000004,
+				F10000000000000000000005, F10000000000000000000006, F10000000000000000000007, F10000000000000000000008,
+				F10000000000000000000009, F1000000000000000000000A, F1000000000000000000000B, F1000000000000000000000C,
+				F1000000000000000000000D, F1000000000000000000000E, F1000000000000000000000F, F10000000000000000000010,
+				F10000000000000000000011, F10000000000000000000012,
+			);
+			name = WildTrace;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000006 /* Products */ = {isa = PBXGroup; children = (F10000000000000000000013 /* WildTrace.app */,); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000007 /* WildTrace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000008 /* Build configuration list for PBXNativeTarget "WildTrace" */;
+			buildPhases = (A10000000000000000000002 /* Sources */, A10000000000000000000003 /* Frameworks */, A10000000000000000000004 /* Resources */);
+			buildRules = ();
+			dependencies = ();
+			name = WildTrace;
+			productName = WildTrace;
+			productReference = F10000000000000000000013 /* WildTrace.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = { BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; TargetAttributes = { A10000000000000000000007 = { CreatedOnToolsVersion = 16.0; }; }; };
+			buildConfigurationList = A10000000000000000000009 /* Build configuration list for PBXProject "WildTrace" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = de;
+			hasScannedForEncodings = 0;
+			knownRegions = (de, Base);
+			mainGroup = A10000000000000000000001;
+			productRefGroup = A10000000000000000000006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A10000000000000000000007 /* WildTrace */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000004 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (B10000000000000000000011 /* Assets.xcassets in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase; buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000001, B10000000000000000000002, B10000000000000000000003, B10000000000000000000004,
+				B10000000000000000000005, B10000000000000000000006, B10000000000000000000007, B10000000000000000000008,
+				B10000000000000000000009, B1000000000000000000000A, B1000000000000000000000B, B1000000000000000000000C,
+				B1000000000000000000000D, B1000000000000000000000E, B1000000000000000000000F, B10000000000000000000010,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C10000000000000000000001 /* Debug project */ = {isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_OPTIMIZATION_LEVEL = 0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; ONLY_ACTIVE_ARCH = YES; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		C10000000000000000000002 /* Release project */ = {isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; GCC_C_LANGUAGE_STANDARD = gnu17; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; VALIDATE_PRODUCT = YES; }; name = Release; };
+		C10000000000000000000003 /* Debug target */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = WildTrace/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = com.personal.WildTrace; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Debug; };
+		C10000000000000000000004 /* Release target */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = WildTrace/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = com.personal.WildTrace; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000008 = {isa = XCConfigurationList; buildConfigurations = (C10000000000000000000003, C10000000000000000000004); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A10000000000000000000009 = {isa = XCConfigurationList; buildConfigurations = (C10000000000000000000001, C10000000000000000000002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000000 /* Project object */;
+}

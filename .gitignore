@@ -1,0 +1,30 @@
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins*
+.packages
+build/
+coverage/
+
+# Xcode
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# Editors/OS
+.DS_Store
+.idea/
+.vscode/
+
+# Local models, audio and device evidence
+Models/
+*.tflite
+*.onnx
+*.wav
+*.m4a
+*.caf
+Documentation/device-evidence/private/
+
+# The legacy PWA remains a separate local Git repository. It is not part of
+# the native iOS/Phase-0 repository or the Codemagic source upload.
+web/
+wildtrace-site.tar.gz

@@ -1,0 +1,64 @@
+# Codemagic configuration for the transitional native Phase-0 spike.
+# This does NOT make the legacy SwiftUI code the WildTrace product; it creates
+# a verifiable route to TestFlight while the Flutter host is still pending.
+
+workflows:
+  ios-simulator-verify:
+    name: WildTrace – iOS simulator verification
+    max_build_duration: 45
+    instance_type: mac_mini_m2
+    environment:
+      xcode: latest
+    scripts:
+      - name: Build the native Phase-0 spike without signing
+        script: |
+          xcodebuild \
+            -project "$CM_BUILD_DIR/WildTrace.xcodeproj" \
+            -scheme WildTrace \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO \
+            clean build
+    artifacts:
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+
+  ios-testflight-internal:
+    name: WildTrace – TestFlight internal
+    # Start this workflow manually in Codemagic. It uploads a signed build to
+    # App Store Connect, but never submits it to the public App Store or to
+    # external TestFlight review.
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    integrations:
+      # Create the App Store Connect integration under exactly this name in
+      # Codemagic Team settings. Never put its .p8 key in this repository.
+      app_store_connect: wildtrace_app_store_connect
+    environment:
+      xcode: latest
+      ios_signing:
+        distribution_type: app_store
+        # Must exactly match PRODUCT_BUNDLE_IDENTIFIER in the Xcode project.
+        # Replace this value after choosing a globally unique identifier.
+        bundle_identifier: com.personal.WildTrace
+    scripts:
+      - name: Install App Store signing identities
+        script: xcode-project use-profiles --custom-export-options='{"testFlightInternalTestingOnly":true}'
+      - name: Set a monotonic TestFlight build number
+        script: |
+          cd "$CM_BUILD_DIR"
+          agvtool new-version -all "$BUILD_NUMBER"
+      - name: Build signed IPA
+        script: |
+          xcode-project build-ipa \
+            --project "$CM_BUILD_DIR/WildTrace.xcodeproj" \
+            --scheme WildTrace
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: false
