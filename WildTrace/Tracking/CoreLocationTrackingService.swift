@@ -55,7 +55,10 @@ final class CoreLocationTrackingService: NSObject, ObservableObject, LocationTra
     }
 }
 
-extension CoreLocationTrackingService: CLLocationManagerDelegate {
+// Core Location still declares these callbacks as nonisolated Objective-C
+// requirements. The service itself intentionally owns UI-facing state on the
+// main actor, so defer that legacy SDK isolation check at this boundary.
+extension CoreLocationTrackingService: @preconcurrency CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         authorizationStatus = manager.authorizationStatus
         accuracyAuthorization = manager.accuracyAuthorization
