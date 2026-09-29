@@ -76,7 +76,9 @@ final class Taxon {
 }
 
 @Model
-final class Observation {
+// Avoid shadowing Apple's Observation module, which SwiftData's @Model macro
+// uses to synthesize Observable conformance.
+final class RecordedObservation {
     @Attribute(.unique) var id: UUID
     var taxonID: UUID
     var scientificName: String

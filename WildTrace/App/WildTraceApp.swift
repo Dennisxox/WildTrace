@@ -9,7 +9,7 @@ struct WildTraceApp: App {
 
     init() {
         let schema = Schema([
-            Tour.self, TrackPoint.self, Taxon.self, Observation.self,
+            Tour.self, TrackPoint.self, Taxon.self, RecordedObservation.self,
             Detection.self, Encounter.self, WeatherSnapshot.self,
             HabitatSnapshot.self, TaxonProfile.self, AudioStorageRule.self,
             ExternalObservationRecord.self, ExplorationCell.self
